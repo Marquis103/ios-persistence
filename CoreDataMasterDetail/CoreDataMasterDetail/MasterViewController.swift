@@ -97,7 +97,11 @@ class MasterViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             objects.removeAtIndex(indexPath.row)
+            sharedContext.deleteObject(objects[indexPath.row])
+            CoreDataStackManager.sharedInstance().saveContext() // This doesn't result in CoreData thinking that the main object has changed
+            println(objects.count)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+           
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
