@@ -98,7 +98,7 @@ class MasterViewController: UITableViewController {
         if editingStyle == .Delete {
             objects.removeAtIndex(indexPath.row)
             sharedContext.deleteObject(objects[indexPath.row])
-            CoreDataStackManager.sharedInstance().saveContext() // This doesn't result in CoreData thinking that the main object has changed
+            CoreDataStackManager.sharedInstance().saveContext() 
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
            
         } else if editingStyle == .Insert {
