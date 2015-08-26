@@ -25,8 +25,10 @@ class CoreDataStackManager {
     // MARK: - Shared Instance
     
     /**
-     *  This class variable provides an easy way to get access
+     *  This class method provides an easy way to get access
      *  to a shared instance of the CoreDataStackManager class.
+     *  For more on the Singleton design pattern, check out:
+     *  http://code.tutsplus.com/articles/design-patterns-singletons--cms-23886
      */
     class func sharedInstance() -> CoreDataStackManager {
         struct Static {
