@@ -8,19 +8,18 @@
 
 
 /**
-* There are 6 changes to be made. They are listed below, and called out in comments in the
+* There are 5 changes to be made. They are listed below, and called out in comments in the
 * code. Notice that the only attribute in this class is "timeStamp", and it gets the current
 * timeStamp by default.
 *
 * 1. import Core Data
-* 2. include the strange statement @objc(Event). This makes Person visible to Core Data code
-* 3. Make Event a subclass of NSManagedObject
-* 4. Add @NSManaged in front of the timeStamp properties/attributes
-* 5. Include the standard Core Data init:
+* 2. Make Event a subclass of NSManagedObject
+* 3. Add @NSManaged in front of the timeStamp properties/attributes
+* 4. Include the standard Core Data init:
 * 
 *     init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext?)
 *
-* 6. Write an init method that only needs a context. 
+* 5. Write an init method that only needs a context.
 *
 *    init(context: NSManagedObjectContext)
 */
